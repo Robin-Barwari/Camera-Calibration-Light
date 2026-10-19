@@ -1,4 +1,4 @@
-# Camera Calibration Skin Lesion Scanner (AESLS)
+# Camera Calibration For Skin Lesion Scanner
 
 > **A Low-Cost, Standardized Edge-AI Imaging Station for Early Dermatological Triage**  
 > Developed for Raspberry Pi 5, Camera Module 3 (Sony IMX708), and a 7" Touchscreen UI.
