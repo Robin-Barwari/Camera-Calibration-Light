@@ -1,15 +1,34 @@
-# Embedded Skin Lesion Scanner
+Autonomous Embedded Skin Lesion Scanner (AESLS)
 
-An embedded computer vision and real-time calibration scanner built for the Raspberry Pi 5 and Camera Module 3 (Sony IMX708) with a 7" touchscreen interface. Designed as a preprocessing pipeline for dermatological classification.
+> **A Low-Cost, Standardized Edge-AI Imaging Station for Early Dermatological Triage**  
+> Developed for Raspberry Pi 5, Camera Module 3 (Sony IMX708), and a 7" Touchscreen UI.
 
 ---
 
-## Features
+## Executive Summary: The Clinical Problem
 
-- **Real-time Color Constancy:** Implements an adaptive Gray World algorithm against an achromatic white reference aperture to eliminate environmental color casts.
-- **Exposure Normalization (ETTR):** Linear luminance standardization targeting a fixed mean intensity of $180 / 255$ (~70% sensor headroom) to maximize SNR while avoiding specular clipping.
-- **7" Touchscreen Interface:** Fullscreen UI with on-screen touch buttons for focus lock, capture/freeze, and application controls.
-- **Automated Standardized Output:** Crops and exports region-of-interest (ROI) images at $224 \times 224$ pixels ready for deep learning inference.
+Malignant melanoma is among the most aggressive forms of cancer, yet survival rates exceed 95% when detected in its earliest stages. Today’s diagnostic workflow in primary healthcare relies heavily on two extremes, both suffering from severe systemic bottlenecks:
+
+1. **Manual Visual Inspection (Analogue Dermatoscopy):**  
+   General practitioners (GPs) inspect suspicious moles with handheld optical dermatoscopes using subjective guidelines (ABCD criteria). Diagnostic accuracy varies heavily depending on practitioner experience, leading to high rates of unnecessary excisions or, worse, delayed specialist referrals.
+2. **Proprietary Hospital Rigs & Smartphone Attachments:**  
+   High-end clinical dermatoscopy setups cost tens of thousands of euros and are confined to specialist dermatology clinics with long waiting times. Conversely, commercial smartphone lens attachments introduce uncontrolled focal lengths, disparate sensor color profiles, and inconsistent ambient illumination—rendering images unsuitable for reproducible artificial intelligence (AI) inference.
+
+---
+
+## 💡 The Solution: Why This Replaces & Modernizes Current Practice
+
+The **Autonomous Embedded Skin Lesion Scanner** bridges the gap between expensive clinical imaging systems and unreliable consumer devices. It is a fully self-contained, standalone medical edge device designed for **Point-of-Care (PoC) primary triage**.
+
+Instead of outsourcing analysis or relying on variable phone cameras, this system enforces **physical and algorithmic standardization at the moment of capture**:
+
+| Feature | Conventional Handheld Dermatoscope | Smartphone AI Apps | **Our Embedded Scanner** |
+| :--- | :--- | :--- | :--- |
+| **Color Calibration** | None (subjective visual interpretation) | None to poor (inconsistent auto-white-balance) | **Real-time Gray World calibration** against an achromatic optical boundary |
+| **Exposure Control** | Manual / uncontrolled ambient drift | Mobile auto-exposure (prone to clipping/highlights) | **Linear Luminance Standardization** ($L=180 / 255$, ETTR-based headroom) |
+| **Image Resolution & Crop** | Full wide-angle image requiring manual crop | Variable aspect ratios & digital zoom artifacts | **Direct hardware-locked $224 \times 224$ ROI extraction** for neural networks |
+| **Workflow & Usability** | Requires trained specialist review | Requires companion apps, pairing, and cloud uploads | **1-Touch Standalone Terminal** with instant freeze, review, and lock controls |
+| **Cost & Scalability** | €1,000 – €15,000+ per unit | Variable consumer hardware; non-standardized | **< €180 in off-the-shelf, open hardware** |
 
 ---
 
@@ -18,6 +37,8 @@ An embedded computer vision and real-time calibration scanner built for the Rasp
 - **SBC:** Raspberry Pi 5 (8GB)
 - **Sensor:** Raspberry Pi Camera Module 3 (Sony IMX708, PDAF autofocus)
 - **Display:** Official Raspberry Pi 7" Touchscreen Display
+- **Enclosure:** Custom 3D-printed V5 assembly (`cad/` directory)
+- **Optical Mask:** Neutral achromatic white reference aperture
 
 ---
 
