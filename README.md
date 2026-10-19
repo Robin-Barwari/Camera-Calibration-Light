@@ -16,7 +16,7 @@ Malignant melanoma is among the most aggressive forms of cancer, yet survival ra
 
 ---
 
-## 💡 The Solution: Why This Replaces & Modernizes Current Practice
+## The Solution: Why This Replaces & Modernizes Current Practice
 
 The **Autonomous Embedded Skin Lesion Scanner** bridges the gap between expensive clinical imaging systems and unreliable consumer devices. It is a fully self-contained, standalone medical edge device designed for **Point-of-Care (PoC) primary triage**.
 
