@@ -1,6 +1,6 @@
 # Embedded Skin Lesion Scanner
 
-An embedded computer vision and real-time calibration scanner built for the Raspberry Pi 5 and Camera Module 3 (Sony IMX708) with a 7" touchscreen interface. Designed as a preprocessing pipeline for dermatological classification (MobileNet v2).
+An embedded computer vision and real-time calibration scanner built for the Raspberry Pi 5 and Camera Module 3 (Sony IMX708) with a 7" touchscreen interface. Designed as a preprocessing pipeline for dermatological classification.
 
 ---
 
