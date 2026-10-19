@@ -42,6 +42,36 @@ Instead of outsourcing analysis or relying on variable phone cameras, this syste
 
 ---
 
+## 🏗️ System Architecture
+
+The complete data pipeline—from optical capture on the Sony IMX708 sensor through real-time Gray World color constancy, touchscreen interaction, and post-capture luminance scaling—is structured as follows:
+
+![System Architecture](docs/system_architecture.png)
+
+---
+
+## 🖥️ User Interface & Touch Operation
+
+The system is operated via a fullscreen 7-inch capacitive touchscreen interface featuring three persistent touch buttons: **[FOKUS]**, **[FRYS BILD]**, and **[AVSLUTA]**.
+
+| Live Startup View | Autofocus Locked View | Frozen Inspection View |
+| :---: | :---: | :---: |
+| ![Startup](docs/gui_startup.png) | ![Focus Locked](docs/gui_focus.png) | ![Frozen](docs/gui_frozen.png) |
+| *Initial preview stream with active white reference aperture and 224x224 ROI box.* | *Active PDAF lens lock to prevent focal drift during clinical capture.* | *Frame frozen in memory for quality check before saving or discarding.* |
+
+---
+
+## 📊 Empirical Validation: Exposure Invariance & Proxy Testing
+
+To evaluate the robustness of the dual-stage calibration pipeline under extreme environmental shifts, paired trials were conducted using a blue ink proxy marker on skin framed by the white reference aperture.
+
+| Test Run | Low Light (Dark Environment) | High Light (Bright Environment) | Evaluation |
+| :--- | :---: | :---: | :--- |
+| **Test 1** | `data/samples/dark1.jpg` | `data/samples/light1.jpg` | Post-capture linear scaling ($target = 180$) successfully eliminates exposure drift. |
+| **Test 2** | `data/samples/dark2.jpg` | `data/samples/light2.jpg` | Preserves invariant lesion contrast and background whiteness across environments. |
+
+---
+
 ## Getting Started
 
 ### Prerequisites
@@ -51,10 +81,3 @@ Ensure your Raspberry Pi OS has libcamera and Picamera2 installed:
 ```bash
 sudo apt update
 sudo apt install python3-picamera2 python3-opencv python3-numpy
-```
-
-## Next Steps (Phase 2)
-
-- [ ] Integrate MobileNet v2 inference directly into the freeze-screen state.
-- [ ] Implement inference latency and thermal monitoring on the Raspberry Pi 5.
-- [ ] Validate cross-dataset generalization using the ISIC skin lesion archive.
