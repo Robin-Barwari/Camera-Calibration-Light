@@ -67,8 +67,8 @@ To evaluate the robustness of the dual-stage calibration pipeline under extreme 
 
 | Test Run | Low Light (Dark Environment) | High Light (Bright Environment) | Evaluation |
 | :--- | :---: | :---: | :--- |
-| **Test 1** | `data/samples/dark1.jpg` | `data/samples/light1.jpg` | Post-capture linear scaling ($target = 180$) successfully eliminates exposure drift. |
-| **Test 2** | `data/samples/dark2.jpg` | `data/samples/light2.jpg` | Preserves invariant lesion contrast and background whiteness across environments. |
+| **Test 1** | ![Dark 1](data/samples/dark1.jpg) | ![Light 1](data/samples/light1.jpg) | Post-capture linear scaling ($target = 180$) successfully eliminates exposure drift. |
+| **Test 2** | ![Dark 2](data/samples/dark2.jpg) | ![Light 2](data/samples/light2.jpg) | Preserves invariant lesion contrast and background whiteness across environments. |
 
 ---
 
