@@ -1,4 +1,4 @@
-Autonomous Embedded Skin Lesion Scanner (AESLS)
+# Autonomous Embedded Skin Lesion Scanner (AESLS)
 
 > **A Low-Cost, Standardized Edge-AI Imaging Station for Early Dermatological Triage**  
 > Developed for Raspberry Pi 5, Camera Module 3 (Sony IMX708), and a 7" Touchscreen UI.
