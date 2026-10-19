@@ -1,0 +1,1 @@
+Hudscanner V5: baserad pa V4.2. Endast utstickande ytterhorn har klippts till den ursprungliga hornkonturen (x+y=157 mm i respektive horn). 45-graders innerprofil och alla andra komponenter bevarade. Verifiera i Fusion och slicer fore utskrift.
