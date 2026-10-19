@@ -46,7 +46,7 @@ Instead of outsourcing analysis or relying on variable phone cameras, this syste
 
 The complete data pipeline—from optical capture on the Sony IMX708 sensor through real-time Gray World color constancy, touchscreen interaction, and post-capture luminance scaling—is structured as follows:
 
-![System Architecture](docs/system_architecture.png)
+![System Architecture](docs/system_architecture.jpg)
 
 ---
 
