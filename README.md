@@ -30,3 +30,10 @@ Ensure your Raspberry Pi OS has libcamera and Picamera2 installed:
 ```bash
 sudo apt update
 sudo apt install python3-picamera2 python3-opencv python3-numpy
+```
+
+## Next Steps (Phase 2)
+
+- [ ] Integrate MobileNet v2 inference directly into the freeze-screen state.
+- [ ] Implement inference latency and thermal monitoring on the Raspberry Pi 5.
+- [ ] Validate cross-dataset generalization using the ISIC skin lesion archive.
