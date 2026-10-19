@@ -42,7 +42,7 @@ Instead of outsourcing analysis or relying on variable phone cameras, this syste
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 The complete data pipeline—from optical capture on the Sony IMX708 sensor through real-time Gray World color constancy, touchscreen interaction, and post-capture luminance scaling—is structured as follows:
 
@@ -50,7 +50,7 @@ The complete data pipeline—from optical capture on the Sony IMX708 sensor thro
 
 ---
 
-## 🖥️ User Interface & Touch Operation
+## User Interface & Touch Operation
 
 The system is operated via a fullscreen 7-inch capacitive touchscreen interface featuring three persistent touch buttons: **[FOKUS]**, **[FRYS BILD]**, and **[AVSLUTA]**.
 
@@ -61,7 +61,7 @@ The system is operated via a fullscreen 7-inch capacitive touchscreen interface 
 
 ---
 
-## 📊 Empirical Validation: Exposure Invariance & Proxy Testing
+## Empirical Validation: Exposure Invariance & Proxy Testing
 
 To evaluate the robustness of the dual-stage calibration pipeline under extreme environmental shifts, paired trials were conducted using a blue ink proxy marker on skin framed by the white reference aperture.
 
